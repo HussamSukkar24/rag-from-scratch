@@ -1,0 +1,19 @@
+{
+  "fixture_version": 1,
+  "description": "Original synthetic retrieval fixture. Gold is document-level with one full-document chunk each. No-answer queries test absence of gold, not a similarity threshold.",
+  "documents": [
+    {"doc_id": "s1", "text": "Visitors may borrow printed books from the library for twenty-one days.", "source": "synthetic:lending"},
+    {"doc_id": "s2", "text": "The observatory admits visitors without charge every Friday evening.", "source": "synthetic:observatory"},
+    {"doc_id": "s3", "text": "Bicycles must be left in the racks beside the eastern entrance.", "source": "synthetic:cycling"},
+    {"doc_id": "s4", "text": "The museum gift shop sells postcards showing planets and stars.", "source": "synthetic:shop"},
+    {"doc_id": "s5", "text": "Library computers are available for sessions lasting one hour.", "source": "synthetic:computers"},
+    {"doc_id": "s6", "text": "Cars use the underground parking garage near the western gate.", "source": "synthetic:parking"}
+  ],
+  "queries": [
+    {"query_id": "paraphrase-loan", "text": "How long can I keep a volume I checked out?", "relevant_doc_ids": ["s1"], "expect_abstain": false},
+    {"query_id": "paraphrase-admission", "text": "When is entry to the astronomy viewing facility free?", "relevant_doc_ids": ["s2"], "expect_abstain": false},
+    {"query_id": "paraphrase-bike", "text": "Where should I park my bike?", "relevant_doc_ids": ["s3"], "expect_abstain": false},
+    {"query_id": "missing-salary", "text": "What is the librarian's annual salary?", "relevant_doc_ids": [], "expect_abstain": true},
+    {"query_id": "missing-menu", "text": "Which vegan meals are served at the cafe?", "relevant_doc_ids": [], "expect_abstain": true}
+  ]
+}

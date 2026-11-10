@@ -1,0 +1,15 @@
+# Candidate additions to the captured semantic environment, not a solved lock.
+# Install only in an isolated environment, using the official CPU index for locked torch.
+# python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-persistent.txt
+# Then pip check and export a fresh complete pip freeze to durable run artifacts.
+-r requirements-semantic-lock.txt
+# PyPI metadata: langchain-chroma 1.0.0 requires chromadb>=1.0.20,<2,
+# langchain-core>=1,<2 and numpy>=2.1 on Python3.13, matching numpy2.2.3.
+# https://pypi.org/pypi/langchain-chroma/1.0.0/json
+# https://pypi.org/pypi/chromadb/1.3.4/json
+# https://pypi.org/pypi/langchain-core/1.7.6/json
+# Core1.0.7 was rejected because packaging<26 conflicts with locked26.3.
+# Core1.7.6 has packaging>=23.2 and no upper bound. Transitives remain unverified.
+chromadb==1.3.4
+langchain-chroma==1.0.0
+langchain-core==1.7.6

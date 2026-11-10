@@ -1,0 +1,14 @@
+{
+  "fixture_version": 1,
+  "documents": [
+    {"doc_id": "d1", "text": "The library opens at 09:00.", "source": "synthetic:library-hours"},
+    {"doc_id": "d2", "text": "The museum closes at 18:00.", "source": "synthetic:museum-hours"},
+    {"doc_id": "d3", "text": "The library is closed on Sundays.", "source": "synthetic:library-days"}
+  ],
+  "queries": [
+    {"query_id": "q1", "text": "Which library opens at 09:00?", "relevant_doc_ids": ["d1"], "expect_abstain": false},
+    {"query_id": "q2", "text": "Which museum closes at 18:00?", "relevant_doc_ids": ["d2"], "expect_abstain": false},
+    {"query_id": "q3", "text": "What is the librarian salary?", "relevant_doc_ids": [], "expect_abstain": true},
+    {"query_id": "q4", "text": "", "relevant_doc_ids": [], "expect_abstain": true}
+  ]
+}
