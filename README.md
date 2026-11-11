@@ -1,5 +1,7 @@
 # RAG from Scratch
 
+[![tests](https://github.com/HussamSukkar24/rag-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/HussamSukkar24/rag-from-scratch/actions/workflows/tests.yml)
+
 An original implementation following [TensorTonic's RAG project](https://www.tensortonic.com/projects/rag-from-scratch).
 
 ## The process
